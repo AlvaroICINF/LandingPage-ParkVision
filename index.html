@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkVision - Estacionamiento Inteligente con IA</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Enlace al archivo de estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/image/favicon-32x32.png" type="image/png">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Barra de navegación -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <!-- Aquí va el logo de ParkVision -->
+                <div class="text-xl font-bold text-blue-600">
+                    <span class="text-green-400">Park</span>Vision
+                </div>
+            </div>
+            
+            <!-- Menú de navegación -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#caracteristicas" class="text-gray-700 hover:text-blue-600 transition duration-300">Características</a>
+                <a href="#beneficios" class="text-gray-700 hover:text-blue-600 transition duration-300">Beneficios</a>
+                <a href="#contacto" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">
+                    Iniciar sesión
+                </button>
+            </div>
+            
+            <!-- Menú móvil (hamburguesa) -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menú móvil desplegable (oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 shadow-inner">
+            <div class="flex flex-col space-y-4">
+                <a href="#caracteristicas" class="text-gray-700 hover:text-blue-600 transition duration-300">Características</a>
+                <a href="#beneficios" class="text-gray-700 hover:text-blue-600 transition duration-300">Beneficios</a>
+                <a href="#contacto" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">
+                    Iniciar sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Hero/Encabezado -->
+    <section class="bg-gradient-to-r from-blue-500 to-green-400 text-white py-24">
+        <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                    ¡Estacionamiento Inteligente, Sin Estrés!
+                </h1>
+                <h2 class="text-xl md:text-2xl mb-8">
+                    Detección en tiempo real, guía inteligente y predicción de disponibilidad para una experiencia de estacionamiento optimizada.
+                </h2>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contacto" class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 shadow-lg text-center">
+                        ¡Descubre ParkVision ahora!
+                    </a>
+                    <a href="#video" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-blue-600 transition duration-300 shadow-lg flex items-center justify-center space-x-2">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Ver demo</span>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2  ml-40">
+                <!-- Imagen principal del hero - primera ubicación estratégica para imagen -->
+                <img src="/image/principal.webp" alt="ParkVision en acción" class="rounded-lg shadow-2xl" width="460" height="60">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Descripción del Servicio -->
+    <section class="py-16 bg-white" id="caracteristicas">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">¿Qué es ParkVision?</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    ParkVision es un sistema de gestión de estacionamientos impulsado por inteligencia artificial que detecta espacios disponibles en tiempo real mediante cámaras con visión por computador. Guía a los conductores al espacio óptimo más cercano, predice la disponibilidad futura basada en patrones históricos y proporciona información accesible desde dispositivos móviles y web.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-camera-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Detección en Tiempo Real</h3>
+                    <p class="text-gray-600">
+                        Nuestras cámaras con IA detectan espacios libres instantáneamente, manteniendo la información actualizada en todo momento.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Guía Inteligente</h3>
+                    <p class="text-gray-600">
+                        Te dirigimos al lugar ideal, considerando proximidad a entradas, tamaño del vehículo y preferencias personales.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Predicción de Disponibilidad</h3>
+                    <p class="text-gray-600">
+                        Nuestra IA analiza patrones históricos para predecir la ocupación futura, permitiéndote planificar con antelación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Datos en Tiempo Real -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 mb-8 md:mb-0">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-4">Disponibilidad en Tiempo Real</h2>
+                            <p class="text-gray-600 mb-6">
+                                Monitorea la disponibilidad de estacionamientos desde cualquier lugar. Nuestra plataforma se actualiza constantemente para mostrarte información precisa.
+                            </p>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <div class="flex justify-between mb-4">
+                                    <span class="text-gray-700 font-medium">Estacionamiento Central</span>
+                                    <span id="parking-availability" class="text-green-500 font-bold">78 espacios libres</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4">
+                                    <div class="bg-green-500 h-4 rounded-full" style="width: 65%"></div>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">Actualizado hace 2 minutos</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <!-- Segunda ubicación estratégica para imagen -->
+                            <img src="/image/preview.webp" alt="Interfaz de la app ParkVision" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Beneficios/Testimonios -->
+    <section class="py-16 bg-white" id="beneficios">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Beneficios Clave</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Descubre cómo ParkVision está revolucionando la experiencia de estacionamiento para conductores y administradores.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Beneficio 1: Ahorro de Tiempo -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-clock text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Ahorro de Tiempo</h3>
+                            <p class="text-gray-600">
+                                "Reduce hasta en un 70% el tiempo dedicado a buscar estacionamiento."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Beneficio 2: Optimización -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-chart-pie text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Optimización</h3>
+                            <p class="text-gray-600">
+                                "Optimiza el uso de la infraestructura de estacionamiento existente."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Beneficio 3: Información en Tiempo Real -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-mobile-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Información en Tiempo Real</h3>
+                            <p class="text-gray-600">
+                                "Disponibilidad de espacios actualizada al instante en tu dispositivo."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Beneficio 4: Guía Inteligente -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-map-signs text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Guía Inteligente</h3>
+                            <p class="text-gray-600">
+                                "Navegación intuitiva al espacio libre más cercano u óptimo."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Beneficio 5: Predicción -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-calendar-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Predicción</h3>
+                            <p class="text-gray-600">
+                                "Anticipa la disponibilidad futura para una planificación sin contratiempos."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Beneficio 6: Ahorro de Combustible -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-leaf text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Ecológico</h3>
+                            <p class="text-gray-600">
+                                "Reduce las emisiones de CO2 al minimizar el tiempo de búsqueda de estacionamiento."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Llamada a la Acción (CTA) -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-green-500 text-white" id="contacto">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Listo para revolucionar tu experiencia de estacionamiento?</h2>
+                <p class="text-xl md:text-2xl mb-8">
+                    Únete a miles de conductores satisfechos que ahorran tiempo y reducen estrés con ParkVision.
+                </p>
+                
+                <button id="show-contact-form" class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                    Empieza a estacionar de forma inteligente
+                </button>
+                
+                <!-- Formulario de contacto (oculto por defecto) -->
+                <div id="contact-form" class="hidden mt-12 bg-white text-gray-800 p-8 rounded-lg shadow-xl max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Solicitar información</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nombre</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Tu nombre">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="tu@email.com">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Mensaje</label>
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                                Enviar
+                            </button>
+                            <button id="hide-contact-form" class="text-blue-600 hover:text-blue-800" type="button">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold mb-4">
+                        <span class="text-green-400">Park</span>Vision
+                    </div>
+                    <p class="text-gray-400 max-w-xs">
+                        Transformando la experiencia de estacionamiento con tecnología de inteligencia artificial avanzada.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-white">Navegación</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
+                            <li><a href="#caracteristicas" class="text-gray-400 hover:text-white transition duration-300">Características</a></li>
+                            <li><a href="#beneficios" class="text-gray-400 hover:text-white transition duration-300">Beneficios</a></li>
+                            <li><a href="#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-white">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Términos y condiciones</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Política de privacidad</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookies</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-white">Contáctanos</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-envelope"></i>
+                                <span class="text-gray-400">info@parkvision.com</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-phone"></i>
+                                <span class="text-gray-400">+1 234 567 890</span>
+                            </li>
+                        </ul>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 ParkVision. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>

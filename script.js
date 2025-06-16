@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     // Crear el botón para volver arriba
-    createScrollTopButton();
+    
     
     // Añadir event listeners
     if (menuToggle) {
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {
         // Mostrar notificación de bienvenida después de 2 segundos
         setTimeout(() => {
-            showNotification("¡Bienvenido a ParkVision! Explora cómo podemos transformar tu experiencia de estacionamiento.", "info", 5000);
+            showNotification("¡Bienvenido a Uparking! Explora cómo podemos transformar tu experiencia de estacionamiento.", "info", 5000);
         }, 2000);
     });
     
